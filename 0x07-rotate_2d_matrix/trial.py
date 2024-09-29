@@ -8,5 +8,6 @@ def rotate_2d_matrix(matrix):
     Args:
         matrix (list[[list]]): a matrix
     """
-    matrix = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
-
+    x = [[matrix[j][i] for j in range(len(matrix)-1,-1,-1)] for i in range(0,len(matrix[0]),1)]
+    for i in range(len(x)):
+        matrix[i] = x[i]
